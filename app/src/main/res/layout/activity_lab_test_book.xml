@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".LabTestBookActivity"
+    android:orientation="vertical"
+    android:background="@drawable/back1">
+    <TextView
+        android:layout_marginTop="100sp"
+        android:text="Health Care"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/doctorname"
+        android:text="Please fill all details"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/name"
+        android:inputType="text"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Patient Name"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10sp"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/address"
+        android:layout_marginBottom="10sp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10sp"
+        android:inputType="text"
+        android:background="@drawable/input_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/pin"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Pin Code"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/contact"
+
+        android:ems="10"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10sp"
+        android:background="@drawable/input_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact No"
+        android:textColorHint="@color/white"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+
+        android:id="@+id/btnbook"
+        android:background="@drawable/btn_bg"
+        android:layout_marginBottom="30sp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"/>
+
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".DoctotBooking"
+    android:orientation="vertical"
+    android:background="@drawable/back1">
+    <TextView
+        android:layout_marginTop="100sp"
+        android:text="Health Care"
+        android:textColor="@color/purple_200"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/doctorname"
+        android:text="Booking"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/name"
+        android:inputType="text"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Patient Name"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10sp"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/address"
+        android:layout_marginBottom="10sp"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10sp"
+        android:inputType="text"
+        android:background="@drawable/input_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/contactno"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contact No"
+        android:textColorHint="@color/white"/>
+    <EditText
+        android:id="@+id/fees"
+
+        android:ems="10"
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10sp"
+        android:background="@drawable/input_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Appointment FEES"
+        android:textColorHint="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginRight="70dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:text="Select Date"/>
+            <EditText
+                android:id="@+id/date"
+                android:ems="6"
+                android:hint="27/10/23"
+                android:textColorHint="#fff"
+                android:inputType="date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:text="Select Time"/>
+<!--            <DatePicker-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"/>-->
+            <EditText
+                android:id="@+id/time"
+                android:ems="4"
+                android:inputType="time"
+                android:layout_width="wrap_content"
+                android:hint="10:00 pm"
+                android:textColorHint="#fff"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+
+        android:id="@+id/bookbtn"
+        android:background="@drawable/btn_bg"
+        android:layout_marginBottom="30sp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"/>
+
+<Button
+    android:id="@+id/back"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Back"/>
+
+
+</LinearLayout>
