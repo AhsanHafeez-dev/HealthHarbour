@@ -19,26 +19,26 @@ public class BuyMedicine extends AppCompatActivity {
     HashMap<String,String> item;
     Button btnback,btnToCart;
     String[][] medicine = {
-            {"Indrop D", "", "", "", "200"},
-            {"Osnate D", "", "", "", "300"},
-            {"Concor 2.5", "", "", "", "900"},
-            {"Xplendid", "", "", "", "1200"},
-            {"Lowplat", "", "", "", "1400"},
-            {"Risek", "", "", "", "1800"},
-            {"Mixtard Penfil", "", "", "", "1800"},
-            {"Covam 5/80", "", "", "", "1900"},
-            {"Galvusmet 50/1000", "", "", "", "3500"}
+            {"Indrop D", "", "", "", "350"},
+            {"Osnate D", "", "", "", "480"},
+            {"Concor 2.5", "", "", "", "1506"},
+            {"Xplendid", "", "", "", "480"},
+            {"Lowplat", "", "", "", "280"},
+            {"Risek", "", "", "", "770"},
+            {"Mixtard Penfil", "", "", "", "450"},
+            {"Covam 5/80", "", "", "", "400"},
+            {"Galvusmet 50/1000", "", "", "", "2300"}
     };
 String medicineDetails[]={
         "Vitamin D 2000iu for absorbing calcium excellent for joint and bones specially for people over 30\n Usual Dosage : 1/week",
-        "Multi Vitamin good for bones and joints specially recomended for elders of over 40 of age",
-        "Generic Formula : Bisoprolo Hemifumarate \nFor cure of : Blood Pressure \nused for reducing blood pressure for use on doctor prescription available in 2.5,5 and 10mg",
-        "Generic Formula : Vildagliptin Metformin HCL \nFor cure of : Diabetes \nused for reducing blood pressure for use on doctor prescription available in 2.5,5 and 10mg",
-        "Multi Vitamin good for bones and joints specially recomended for elders of over 40 of age",
-        "Multi Vitamin good for bones and joints specially recomended for elders of over 40 of age",
-        "Multi Vitamin good for bones and joints specially recomended for elders of over 40 of age",
-        "Multi Vitamin good for bones and joints specially recomended for elders of over 40 of age",
-        "Generic Formula : Vildagliptin Metformin HCL \nFor cure of : Diabetes \nused for reducing blood pressure for use on doctor prescription available in 2.5,5 and 10mg",
+        "MultiVitamin with added vitamin D.\nespecially beneficial for people above 40 years\n helps absorbing calcium\n provide sufficient calcium",
+        "A: Concor 2.5 MG tablet is used to treat hypertension (high blood pressure) and angina (chest pain caused by a decrease in oxygen supply to the heart muscles) either alone or in combination with other medications. This medication relaxes the heart muscles and reduces the rate of your heart. This reduces blood pressure.",
+        "Generic Formula :  Rosuvastin\n For cure of:cholestrol\nused on doctor prescription \navailable in 5,10 and 20mg\nmanufactured by pharmaevo",
+        "Generic Formula : Clopridrogel\nLOWPLAT (Clopidogrel) is indicated to reduce the rate of myocardial infarction and stroke in patients with acute ST-elevation myocardial infarction (STEMI) (who are to be managed medically).\n It should be administered in conjunction with aspirin.",
+        "Generic Formula : Omeprazole \nFor adults for the treatment of: Gastro-Esophageal Reflux Disease (GERD): treatment of erosive reflux esophagitis, long term management of patients with healed esophagitis to prevent relapse and symptomatic treatment of gastroesophageal reflux disease (GERD). Gastric and duodenal ulcer.\navailable in sachets and capsule\n20 and 40 mg available",
+        "Mixtard® 30 and Protaphane® are human insulins used to treat diabetes. Diabetes mellitus is a disease where your body does not produce enough insulin to control the level of your blood sugar.",
+        "Indication: For the treatment of hypertension in: Patients whose blood pressure is not adequately controlled on either monotherapy. Patients who are likely to need multiple drugs to achieve their blood pressure goals.\n",
+        "Generic Formula : Vildagliptin Metformin HCL \nThe drug is indicated in the treatment of type 2 diabetes with the following specific uses: Galvus met is indicated as an adjunct to diet and exercise to help improve blood sugar control in humans. ",
 
 };
 

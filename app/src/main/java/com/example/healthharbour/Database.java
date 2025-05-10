@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Database extends SQLiteOpenHelper {
     Context context;
     public Database(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+
         super(context, name, factory, version);
         this.context=context;
     }
@@ -32,7 +33,7 @@ public class Database extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-db.execSQL("");
+        onCreate(db);
     }
     public  void register(String name,String email,String password)
     {
@@ -100,13 +101,14 @@ db.execSQL("");
         String str[]={username,otype};
         Cursor cursor=db.rawQuery("select * from cart where username=? and otype=?",str);
         if(cursor.moveToFirst()){
-        do
+            while(cursor.moveToNext())
         {
             String product=cursor.getString(1);
             Float price=cursor.getFloat(2);
 
             data.add(product+"$"+price);
-        }while(cursor.moveToNext());}
+        }
+        }
 
                 db.close();
                 return data;
@@ -135,11 +137,12 @@ db.execSQL("");
         SQLiteDatabase db=getReadableDatabase();
         String str[]={username};
         Cursor cursor=db.rawQuery("select * from orderplace where username = ?",str);
+
         if(cursor.moveToFirst()){
-            do{
+            while(cursor.moveToNext()){
                 data.add(cursor.getString(1)+"$"+cursor.getString(2)+"$"+cursor.getString(3)+"$"+cursor.getString(4)+"$"+cursor.getString(5)+"$"+cursor.getString(6)+"$"+cursor.getString(7)+"$"+cursor.getString(8) );
             }
-            while(cursor.moveToNext());
+
         }
         //fullname , address contactno pin
 //(username text,fullname text,address text,contactno text,pincode int,date text,time text,amount float,otype text)

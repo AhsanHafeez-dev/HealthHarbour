@@ -81,11 +81,11 @@ public class MedicineCheckoutCart extends AppCompatActivity {
         for(int i=0;i<packages.length;i++)
         {
             item=new HashMap<String,String>();
-            item.put("line1",packages[i][0]);
-            item.put("line2",packages[i][1]);
+            item.put("line1",packages[i][0]);//name
+            item.put("line2",packages[i][1]);//price
             item.put("line3",packages[i][2]);
             item.put("line4",packages[i][3]);
-            item.put("line5","Test Fees : "+packages[i][4]+" PKR /-");
+            item.put("line5","Cost : "+packages[i][4]+" PKR /-");
             list.add(item);
 
 
@@ -102,8 +102,10 @@ public class MedicineCheckoutCart extends AppCompatActivity {
                 Intent intent1=new Intent(MedicineCheckoutCart.this,LabTestBookActivity.class);
                 Toast.makeText(MedicineCheckoutCart.this, totalAmount+"", Toast.LENGTH_SHORT).show();
                 intent1.putExtra("price",totalAmount);
-                intent1.putExtra("date",date.getText());
-                intent1.putExtra("time",time.getText());
+//                Toast.makeText(MedicineCheckoutCart.this, "", Toast.LENGTH_SHORT).show();
+                intent1.putExtra("date",date.getText().toString());
+                intent1.putExtra("time",time.getText().toString());
+                intent1.putExtra("otype","medicine");
 
                 startActivity(intent1);
 

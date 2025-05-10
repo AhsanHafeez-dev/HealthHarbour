@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 public class LabTestBookActivity extends AppCompatActivity {
     EditText name,pin,contact,address;
     Button btnback,btnbook;
@@ -20,7 +24,10 @@ public class LabTestBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_test_book);
         name=findViewById(R.id.name);
-
+        SharedPreferences sharedPreferences=getSharedPreferences("shared", Context.MODE_PRIVATE);
+        String naam=sharedPreferences.getString("username","unknown");
+        name.setEnabled(false);
+        name.setText(naam);
         pin=findViewById(R.id.pin);
         contact=findViewById(R.id.contact);
         address=findViewById(R.id.address);
@@ -29,8 +36,8 @@ public class LabTestBookActivity extends AppCompatActivity {
 
         Intent intent=getIntent();
 
-        String price=intent.getStringExtra("price");
-
+        float price=intent.getFloatExtra("price",0);
+        Toast.makeText(this, price+"", Toast.LENGTH_SHORT).show();
         String date=intent.getStringExtra("date");
         String time=intent.getStringExtra("time");
 
@@ -44,21 +51,25 @@ public class LabTestBookActivity extends AppCompatActivity {
         btnbook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences sharedPreferences=getSharedPreferences("shared", Context.MODE_PRIVATE);
-                String naam=sharedPreferences.getString("username","unknown");
-                Toast.makeText(LabTestBookActivity.this, "pref  "+naam, Toast.LENGTH_SHORT).show();
+
+                String contactno=contact.getText().toString();
+                String Address=address.getText().toString();
+                LocalDate currentDate = LocalDate.now();
+                LocalTime currentTime = LocalTime.now();
+                DateTimeFormatter.ofPattern("HH:mm");
+                String otype=intent.getStringExtra("otype");
+
+                Toast.makeText(LabTestBookActivity.this, "Rs :   "+price, Toast.LENGTH_SHORT).show();
 
 
                 Database db=new Database(LabTestBookActivity.this,"healthcare",null,1);
-                Toast.makeText(LabTestBookActivity.this, "dbstart", Toast.LENGTH_SHORT).show();
 
-                    Toast.makeText(LabTestBookActivity.this, "if", Toast.LENGTH_SHORT).show();
-
-                db.addOrder(naam,"ahsan","Mehmooodabad corporation","0307 2793796",Integer.parseInt("0909"),date,time,"lab",Float.parseFloat("1200"));
+                db.addOrder(naam,naam,Address,contactno,Integer.parseInt("0909"),currentDate.toString(),currentTime.toString(),otype,price);
 
 
 
-                db.removeCart(naam,"lab");
+
+                db.removeCart(naam,otype);
 
                 Toast.makeText(LabTestBookActivity.this, "Order placed Succesfully", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LabTestBookActivity.this, HomeActivity.class));

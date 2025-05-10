@@ -25,9 +25,13 @@ public class LabTest extends AppCompatActivity {
             "Complete Hemogram\n"+"HbA1C\n"+"Iron Studies"+
             "Kidney Function Test\n"+"LDH lactate Dehydrogenase , serum \n"+
             "Lipid Profile\n"+"Liver Function Test \n",
+
             "Blood Glucose Fasting\n",
+
             "COVID-19 Antobody - IgG",
+
             "Throid Profile Total (T3,T4 and TSH Ultra-Sensitive)",
+
             "Complete Hemogram \n"+
                     "CRP (C Reative Protien)  Quantitative , serum\n"+
                     "Iron Studies \n"+
@@ -75,8 +79,6 @@ public class LabTest extends AppCompatActivity {
             item.put("line4",packages[i][3]);
             item.put("line5","Consultancy Fees : "+packages[i][4]+" PKR /-");
             list.add(item);
-
-
         }
         sa=new SimpleAdapter(this,list,
                 R.layout.list_layout,
@@ -89,9 +91,9 @@ public class LabTest extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent1=new Intent(LabTest.this, LabTestDetails.class);
-                intent1.putExtra("text1",packages[position][0]);
-                intent1.putExtra("text2",package_detail[position]);
-                intent1.putExtra("text3",packages[position][4]);
+                intent1.putExtra("text1",packages[position][0]);//test name
+                intent1.putExtra("text2",package_detail[position]);// all test in package
+                intent1.putExtra("text3",packages[position][4]);//consultancy fees
 
 
                 startActivity(intent1);

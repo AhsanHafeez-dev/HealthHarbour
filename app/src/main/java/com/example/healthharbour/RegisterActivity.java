@@ -13,13 +13,14 @@ import android.widget.Toast;
 public class RegisterActivity extends AppCompatActivity {
     EditText username,email,confirmpassword,password;
     Button registerbtn;
-    TextView sighnup,login;
+    TextView login;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         username=findViewById(R.id.username);
         password=findViewById(R.id.password);
         confirmpassword=findViewById(R.id.confirmpassword);
@@ -57,7 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     Database db=new Database(RegisterActivity.this,"healthcare",null,1);
                     db.register(name,Email,pass);
-                        Toast.makeText(RegisterActivity.this, ""+db.login(name,pass), Toast.LENGTH_SHORT).show();
+
 
 
                         Toast.makeText(RegisterActivity.this, "Succesfully registered going to login page", Toast.LENGTH_SHORT).show();

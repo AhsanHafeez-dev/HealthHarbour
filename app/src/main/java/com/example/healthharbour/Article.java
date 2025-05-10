@@ -51,6 +51,7 @@ public class Article extends AppCompatActivity {
                 Article.super.onBackPressed();
             }
         });
+        
         list=new ArrayList();
         for(int i=0;i<article_details.length;i++)
         {

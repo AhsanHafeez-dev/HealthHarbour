@@ -102,6 +102,7 @@ public class LabOrderDetails extends AppCompatActivity {
                 intent1.putExtra("price",totalAmount);
                 intent1.putExtra("date",date.getText());
                 intent1.putExtra("time",time.getText());
+                intent1.putExtra("otype","lab");
 
                 startActivity(intent1);
 
